@@ -11,7 +11,7 @@ DEFINE('DB', 'id2008008_trices');
 		$token = $_GET["Token"];
 
 
-		$con = mysqli_connect(HOST, USER, PASSWORD, DB) or die('unable to connect DB');
+		$conn=mysqli_connect(HOST, USER, PASSWORD, DB) or die('unable to connect DB');
 
 
 		$query = "INSERT INTO registered_devices (device, type) VALUES ('$token', 'sms') ON DUPLICATE KEY UPDATE device = '$token'";
